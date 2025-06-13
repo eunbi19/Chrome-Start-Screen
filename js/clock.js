@@ -1,7 +1,6 @@
 const dateElement = document.getElementById("date");
 const timeElement = document.getElementById("time");
 
-// 숫자를 수정
 const modifyNumber = (number) => {
   return parseInt(number) < 10 ? "0" + number : number;
 };
@@ -18,18 +17,17 @@ const getNowDate = () => {
 const setNowDate = (month, date, day) => {
   dateElement.textContent = `${month}월 ${date}일 ${day}요일`;
 };
-
 const getNowTime = () => {
   const nowDate = new Date();
   let hour = modifyNumber(nowDate.getHours());
-  let minute = modifyNumber(nowDate.getMinutes());
-  setNowTime(hour, minute);
+  let munute = modifyNumber(nowDate.getMinutes());
+  setNowTime(hour, munute);
 };
 
-const setNowTime = (hour, minute) => {
-  timeElement.textContent = `${hour} : ${minute}`;
+const setNowTime = (hour, munute) => {
+  timeElement.textContent = `${hour} : ${munute}`;
 };
+
 getNowDate();
 getNowTime();
-
 setInterval(getNowTime, 1000);

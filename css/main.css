@@ -46,3 +46,14 @@ body {
   font-size: var(--medium);
   color: rgba(169, 169, 169);
 }
+
+.saying {
+  position: fixed;
+  bottom: 0;
+  max-width: 800px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  font-size: var(--small);
+  font-weight: 300;
+  text-align: center;
+}
