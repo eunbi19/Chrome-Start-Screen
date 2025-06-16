@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>크롬 익스텐션</title>
+    <script src="./js/clock.js" defer></script>
+    <script src="./js/search.js" defer></script>
+    <script src="./js/saying.js" defer></script>
+    <script src="./js/bookmark-toggle.js" defer></script>
+    <script src="./js/bookmark.js" defer></script>
     <link rel="stylesheet" href="./css/font.css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
@@ -22,13 +27,42 @@
             <input id="search-input" placeholder="검색어를 입력하세요" />
           </div>
         </div>
-        <div class="saying" id="saying">
-          <!-- 명언 -->
+      </div>
+      <div class="saying" id="saying">
+        <!-- 명언 -->
+      </div>
+
+      <!-- 북마크 열린 상태 -->
+      <div class="bookmark-open" id="bookmark-open">
+        <div id="bookmark-open-btn">북마크 닫기</div>
+      </div>
+      <!-- 북마크 닫힌 상태 -->
+      <div class="bookmark-close" id="bookmark-close">
+        <div id="bookmark-close-btn">북마크 열기</div>
+      </div>
+      <div class="bookmark-bar" id="bookmark-bar">
+        <!-- 북마크 바 -->
+        <div id="bookmark-item-add-btn" class="bookmark-item-add-btn">
+          + 북마크 추가
         </div>
+        <div class="bookmark-item-input-form" id="bookmark-item-input-form">
+          <div class="bookmark-input">
+            <div class="new-bookmark-name">
+              <div class="label">이름</div>
+              <input type="text" id="new-bookmark-name-input" title="이름" />
+            </div>
+            <div class="new-bookmark-url">
+              <div class="label">주소</div>
+              <input type="text" id="new-bookmark-url-input" title="url" />
+            </div>
+          </div>
+          <div class="bookmark-item-input-btn">
+            <div class="cancel-btn" id="cancel-btn">취소</div>
+            <div class="add-btn" id="add-btn">추가</div>
+          </div>
+        </div>
+        <div class="bookmark-list" id="bookmark-list"></div>
       </div>
     </div>
-    <script src="./js/clock.js"></script>
-    <script src="./js/search.js"></script>
-    <script src="./js/saying.js"></script>
   </body>
 </html>
